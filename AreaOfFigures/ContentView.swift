@@ -20,6 +20,8 @@ struct ContentView: View {
             return AnyView(RectangleView())
         case .circle:
             return AnyView(CircleView())
+        case .rhombus:
+            return AnyView(RhombusView())
         }
     }
     

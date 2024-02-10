@@ -9,7 +9,7 @@ import Foundation
 
 
 enum Figure: String, CaseIterable, Identifiable {
-    case triangle, rectangle, circle
+    case triangle, rectangle, circle, rhombus
     var id: Self {
         self
     }
