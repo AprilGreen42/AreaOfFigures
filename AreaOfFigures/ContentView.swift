@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var selectedFigure: Figure = .triangle
     @State private var text: String = ""
     
-    func findingArea(figure: Figure) -> some View {
+    func choiceFigure(figure: Figure) -> some View {
         switch figure {
         case .triangle:
             return AnyView(TriangleView())
@@ -22,6 +22,8 @@ struct ContentView: View {
             return AnyView(CircleView())
         case .rhombus:
             return AnyView(RhombusView())
+        case .pentagon:
+            return AnyView(PentagonView())
         }
     }
     
@@ -37,7 +39,7 @@ struct ContentView: View {
                 Image(systemName: selectedFigure.rawValue)
                     .resizable()
                     .frame(width: 150, height: 150)
-                findingArea(figure: selectedFigure)
+                choiceFigure(figure: selectedFigure)
             }
             .navigationTitle("Площадь фигуры")
         }

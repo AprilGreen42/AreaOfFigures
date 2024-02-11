@@ -10,14 +10,13 @@ import SwiftUI
 struct CircleView: View {
     @State private var radius: String = ""
     func areaOfFigure(r: String) -> some View {
-        let R: Double? = Double(r) ?? 0
+        let radius: Double? = Double(r) ?? 0
         return VStack {
             HStack {
                 Image(systemName: "s.square")
                     .resizable()
                     .frame(width: 30, height: 30)
-                Text(" = \(3.14 * R! * R!)")
-                    .foregroundStyle(.black)
+                Text(" = \(3.14 * radius! * radius!)")
                     .font(.system(size: 42))
             }
         }

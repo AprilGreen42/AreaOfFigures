@@ -14,27 +14,26 @@ struct TriangleView: View {
     @State private var calculate: Bool = false
     
     func areaOfFigure(a: String, b: String, c: String) -> some View {
-        let A: Double? = Double(a) ?? 0
-        let B: Double? = Double(b) ?? 0
-        let C: Double? = Double(c) ?? 0
-        let p: Double? = (A! + B! + C!) / 2
-        let p_a: Double = p! - A!
-        let p_b: Double = p! - B!
-        let p_c: Double = p! - C!
-        let temp: Double? = (p! * p_a * p_b * p_c)
-        let s: Double? = sqrt(temp!)
+        let sideFirst: Double? = Double(a) ?? 0
+        let sideSecond: Double? = Double(b) ?? 0
+        let sideThird: Double? = Double(c) ?? 0
+        let per: Double? = (sideFirst! + sideSecond! + sideThird!) / 2
+        let per_a: Double = per! - sideFirst!
+        let per_b: Double = per! - sideSecond!
+        let per_c: Double = per! - sideThird!
+        let temp: Double? = (per! * per_a * per_b * per_c)
+        let area: Double? = sqrt(temp!)
         return VStack {
             HStack {
                 Image(systemName: "s.square")
                     .resizable()
                     .frame(width: 30, height: 30)
-                Text(" = \(s!)")
-                    .foregroundStyle(.black)
+                Text(" = \(area!)")
                     .font(.system(size: 42))
             }
-            if ((A! * A! + B! * B! == C! * C! && s != 0) ||
-                (C! * C! + B! * B! == A! * A! && s != 0) ||
-                (A! * A! + C! * C! == B! * B! && s != 0)) {
+            if ((sideFirst! * sideFirst! + sideSecond! * sideSecond! == sideThird! * sideThird! && area != 0) ||
+                (sideThird! * sideThird! + sideSecond! * sideSecond! == sideFirst! * sideFirst! && area != 0) ||
+                (sideFirst! * sideFirst! + sideThird! * sideThird! == sideSecond! * sideSecond! && area != 0)) {
                 Text("Треульник - прямоугольный")
                     .bold()
                     .font(.title2)

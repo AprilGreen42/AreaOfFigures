@@ -1,24 +1,26 @@
 //
-//  RectangleView.swift
+//  PentagonView.swift
 //  AreaOfFigures
 //
-//  Created by Дмитрий on 10.02.2024.
+//  Created by Дмитрий on 11.02.2024.
 //
 
 import SwiftUI
 
-struct RectangleView: View {
-    @State private var sideA: String = ""
-    @State private var sideB: String = ""
-    func areaOfFigure(a: String, b: String) -> some View {
-        let sideFirst: Double? = Double(a) ?? 0
-        let sideSecond: Double? = Double(b) ?? 0
+struct PentagonView: View {
+    @State private var apofema: String = ""
+    @State private var side: String = ""
+    
+    func areaOfFigure(apof: String, sideOfFigure: String) -> some View {
+        let ap: Double? = Double(apof) ?? 0
+        let sideA: Double? = Double(sideOfFigure) ?? 0
+        let area: Double? = ((ap! * sideA!) / 2) * 5
         return VStack {
             HStack {
                 Image(systemName: "s.square")
                     .resizable()
                     .frame(width: 30, height: 30)
-                Text(" = \(sideFirst! * sideSecond!)")
+                Text(" = \(area!)")
                     .font(.system(size: 42))
             }
         }
@@ -26,22 +28,20 @@ struct RectangleView: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("Сторона A", text: $sideA)
+                TextField("Сторона", text: $apofema)
                     .frame(width: 100, height: 50)
                     .textFieldStyle(.roundedBorder)
                     .multilineTextAlignment(.center)
-                TextField("Сторона B", text: $sideB)
+                TextField("Апофема", text: $side)
                     .frame(width: 100, height: 50)
                     .textFieldStyle(.roundedBorder)
                     .multilineTextAlignment(.center)
             }
-            .padding()
-            
-            areaOfFigure(a: sideA, b: sideB)
+            areaOfFigure(apof: apofema, sideOfFigure: side)
         }
     }
 }
 
 #Preview {
-    RectangleView()
+    PentagonView()
 }

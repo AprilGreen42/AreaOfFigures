@@ -12,15 +12,14 @@ struct RhombusView: View {
     @State private var diagonalSecond: String = ""
     
     func areaOfFigure(d1: String, d2: String) -> some View {
-        let D1: Double? = Double(d1) ?? 0
-        let D2: Double? = Double(d2) ?? 0
+        let df: Double? = Double(d1) ?? 0
+        let ds: Double? = Double(d2) ?? 0
         return VStack {
             HStack {
                 Image(systemName: "s.square")
                     .resizable()
                     .frame(width: 30, height: 30)
-                Text(" = \((D1! * D2!) / 2)")
-                    .foregroundStyle(.black)
+                Text(" = \((df! * ds!) / 2)")
                     .font(.system(size: 42))
             }
         }

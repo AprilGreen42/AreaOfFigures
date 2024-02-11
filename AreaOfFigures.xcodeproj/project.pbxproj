@@ -16,6 +16,7 @@
 		1143DA452B777FC5001436EF /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143DA442B777FC5001436EF /* RectangleView.swift */; };
 		1143DA492B77AE7C001436EF /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143DA482B77AE7C001436EF /* CircleView.swift */; };
 		1143DA4B2B784223001436EF /* RhombusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143DA4A2B784223001436EF /* RhombusView.swift */; };
+		1143DA4E2B784807001436EF /* PentagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143DA4D2B784807001436EF /* PentagonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1143DA442B777FC5001436EF /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		1143DA482B77AE7C001436EF /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		1143DA4A2B784223001436EF /* RhombusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhombusView.swift; sourceTree = "<group>"; };
+		1143DA4D2B784807001436EF /* PentagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PentagonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				1143DA442B777FC5001436EF /* RectangleView.swift */,
 				1143DA482B77AE7C001436EF /* CircleView.swift */,
 				1143DA4A2B784223001436EF /* RhombusView.swift */,
+				1143DA4D2B784807001436EF /* PentagonView.swift */,
 			);
 			path = Figures;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				1143DA4B2B784223001436EF /* RhombusView.swift in Sources */,
 				1143DA412B7673CC001436EF /* AreaSolution.swift in Sources */,
 				1143DA352B7670A6001436EF /* ContentView.swift in Sources */,
+				1143DA4E2B784807001436EF /* PentagonView.swift in Sources */,
 				1143DA432B777F34001436EF /* TriangleView.swift in Sources */,
 				1143DA332B7670A6001436EF /* AreaOfFiguresApp.swift in Sources */,
 				1143DA452B777FC5001436EF /* RectangleView.swift in Sources */,
