@@ -40,6 +40,8 @@ struct ContentView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
                 choiceFigure(figure: selectedFigure)
+                Spacer()
+                    .padding()
             }
             .navigationTitle("Площадь фигуры")
         }
